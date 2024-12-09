@@ -6,7 +6,9 @@ Architechture - https://app.eraser.io/workspace/D9gMWx8fRkfXbxo51D32
 
 Timestamp - 12/04/2023
 00:03 Introduction to the staff room session
+
 02:22 Discussion on containerization and deployment
+
 06:36 Setting up TypeScript configuration and basic Express application
 08:28 Building and running the project with npm
 12:19 How to copy package.json and package-lock.json in DevOps
