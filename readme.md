@@ -65,9 +65,30 @@ Scrpts -  1. Start script
           2. Build script - Convert TypeScript project to JavaScript
           
           Package.json -
-          
+
           3. Dependencies - Express - 4.18.2
              
              DevDependencies - Express - 4.17.21 
                                
                                TypeScript - 5.3.3  
+
+          4.tsconfig.json - Typecript configuration file
+            
+            1. SourceRoot - src
+            
+            2. OutDir - dist (After compilation)
+          
+          5. Installed Modules -
+             npm ci 
+             (created node_modules folder) 
+
+          6. After running build script
+             npm run build
+
+             compiled files are in dist folder (index.js)
+
+          7. To start the application
+             npm start
+
+
+             
