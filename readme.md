@@ -114,6 +114,61 @@ Scrpts -  1. Start script
                git commit -m "message"
                git push -u origin main
 
-            10.   
+            10. Now we create dockerfile and in that we create multiple stages
+                
+            11. Now we check that dockerfilre is locally working or not
+                
+                sudo docker build -t chai-and-code-express .
 
+                sudo docker run -it -p 8000:8000 chai-and-code-express 
+
+                http://localhost:8000/health
+
+                http://localhost:8000/
+
+
+            12. We will host on cloud like AWS, Azure, GCP, etc so we called image registry
+                
+                docker official image registry is called docker hub
+                
+                docker - hub.docker.com
+                
+                AWS ECR - Amazon Elastic Container Registry 
+                
+                GCP GCR - Google Cloud Container Registry
+                
+                Azure ACR - Azure Container Registry
+ 
+            13. Login in AWS ECR
+                
+                Create Private repository - chai-and-code-express
+            
+            14. Click on repo and then click on view push command
+                
+            15. Setup aws cli
+                
+               refer this 
+               
+                 https://medium.com/@simonazhangzy/installing-and-configuring-the-aws-cli-7d33796e4a7c
+
+            16. Retrieve an authentication token and authenticate your Docker client to your registry. Use the AWS CLI:
+
+                 aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 869935099377.dkr.ecr.ap-south-1.amazonaws.com
+            
+            17. After the build completes, tag your image so you can push the image to this repository:
+
+            docker tag chai-aur-code-express:latest 869935099377.dkr.ecr.ap-south-1.amazonaws.com/chai-aur-code-express:latest
+
+            18. Run the following command to push this image to your newly created AWS repository:
+
+                docker push 869935099377.dkr.ecr.ap-south-1.amazonaws.com/chai-aur-code-express:latest
+
+            19. Visit aws ecs console and Create clusters using aws Fargate
+                  
+                chai-and-new-code-cluster
+
+            20. create task definition and create service with fargate serverlesa
+                 
+                chai-and-new-code-task 
              
+                 
