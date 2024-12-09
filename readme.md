@@ -57,3 +57,17 @@ Video Timestamps and Topics
 1:06:07 - Discussing Kubernetes deployment and scaling in DevOps
 
 1:07:53 - Managing zero running tasks in DevOps
+
+Project - type script Project
+Application Type - Express application
+Scrpts -  1. Start script 
+         
+          2. Build script - Convert TypeScript project to JavaScript
+          
+          Package.json -
+          
+          3. Dependencies - Express - 4.18.2
+             
+             DevDependencies - Express - 4.17.21 
+                               
+                               TypeScript - 5.3.3  
