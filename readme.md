@@ -104,7 +104,16 @@ Scrpts -  1. Start script
          https://github.com/ankitAMD/node-express-docker/blob/main/Output1.jpg
 
 
+            8. Command to merge the code if there are any changes from remote github repo
+               git fetch
+               git status
+               git merge origin/main
 
+            9. Command to push the code to remote github repo
+               git add .
+               git commit -m "message"
+               git push -u origin main
 
+            10.   
 
              
