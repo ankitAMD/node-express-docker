@@ -169,6 +169,63 @@ Scrpts -  1. Start script
 
             20. create task definition and create service with fargate serverlesa
                  
-                chai-and-new-code-task 
-             
-                 
+                Task -definition family Name - chai-and-new-code-task 
+            
+                Launch type - Fargate
+            
+                Operating system/Architecture - Linux/x86_64 (i used this )
+            
+                 Network mode - awsvpc
+            
+                 Cpu - 1 vCPU
+            
+                 Memory - 3 GB    
+
+                 Task role - ecsTAskExecutionrole
+            
+                 Task Execution role - create new role
+            
+                 Container DETAILS - chai-and-code-image / container
+            
+                 Image URI - 869935099377.dkr.ecr.ap-south-1.amazonaws.com/
+            
+                 chai-aur-code-express:latest
+            
+                 Container port - 8000 (becuae my container is exposing port 8000)
+            
+                  Health check - CMD-SHELL,curl -f http://localhost:8000/health || exit 1
+            
+                  Health check grace period - 30s
+            
+                 Health check retry count - 3
+            
+                 Click on create --its created task but you can't delete it and its not chargeable
+
+            21. Click on cluster and then click on services and then click on create service
+
+                 Choose Capacity Provider - Fargate
+            
+                 Task Definition - chai-and-new-code-task
+            
+                 Family Name - select created task definition family name
+
+                 Service Name - chai-and-code-service
+        
+                 Desired task - 1
+
+                 Deployment options - Rolling update
+
+                 Service auto scale - yes
+
+                 Click on Create
+
+            22. After creation, Go to security group and add in bound rule is all tcp with anywhere IPV4.
+
+            23. Click on DNS which u can get from load balancer DNS name
+
+                example : http://chai-aur-code-lb-2079954951.ap-south-1.elb.amazonaws.com
+                      
+                          http://chai-aur-code-lb-2079954951.ap-south-1.elb.amazonaws.com/health
+        
+            
+
