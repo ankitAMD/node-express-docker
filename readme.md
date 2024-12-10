@@ -226,6 +226,19 @@ Scrpts -  1. Start script
                 example : http://chai-aur-code-lb-2079954951.ap-south-1.elb.amazonaws.com
                       
                           http://chai-aur-code-lb-2079954951.ap-south-1.elb.amazonaws.com/health
-        
+
+            
+            24. How to delete the cluster
+                
+                First go to cluster and then click on update service
+
+                then go to Desired service and then become  0 And then click on update
+
+                Now Task become stopped  and service 0/0 Tasks running
+
+                Now click on delete cluster.
+
+
+               
             
 
